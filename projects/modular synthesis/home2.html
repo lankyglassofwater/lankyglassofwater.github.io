@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style2.css" />
+	<title>modular synthesis</title>
+	<script>
+		function switchDiv() {
+			var x = document.getElementById("below")			
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			}
+			else {
+				x.style.display = "block";
+			}
+		}
+/* cant seem to get this to work
+		function alignButton() {
+			var x = document.getElementsByClassName("d-table-cell onoff")
+			if (x.style.textAlign === "left") {
+				x.style.textAlign = "right"
+			}
+			else {
+				x.style.textAlign = "left"
+			}
+		}
+*/
+		
+		function combined() {
+			switchDiv();
+			//alignButton();
+		}
+	</script>
+  </head>
+  <body>
+	<div class="border d-table">
+		<h3 class="d-table-cell">modular synthesis</h3>
+		<div class="d-table-cell onoff">
+			<button onclick="combined()"></button>
+		</div>
+	</div>
+	<div id="below">
+	  <div class="content">
+			<p id="content_text"></p>
+	  </div>
+	  <nav>
+		<div id="VCO">
+			<div class="VCO"></div>
+			<h1 class="VCO_sub"></h1>
+		</div>
+		<div id="FILTER">
+			<div class="FILTER"></div>
+			<h1 class="FILTER_sub"></h1>
+		</div>
+		<div id="VCA">
+			<div class="VCA"></div>
+			<h1 class="VCA_sub"></h1>
+		</div>
+		<div id="LFO">
+			<div class="LFO"></div> 
+			<h1 class="LFO_sub"></h1>
+		</div>
+		<div id="EG">
+			<div class="EG"></div>
+			<h1 class="EG_sub"></h1>
+		</div>
+	  </nav>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script>
+	  
+	  $("#VCO").mouseover(function () {
+		$(".VCO_sub").html("Voltage<br>Controlled<br>Oscillator")
+	  })
+	  $("#VCO").click(function () {
+		$("#content_text").fadeOut("slow",function() {
+			$("#content_text").html("To get any sound, first we need a source.  The most common source is called a Voltage-Controlled Oscillator, or VCO for short.  These modules produce waves that range from simple to complex, depending on the model.   Some have a single output and a switch that lets you choose between waveforms, and some have multiple jacks that let you access several different waves simultaneously.")
+			$("#content_text").fadeIn(2000)			
+		})
+	  })
+	  $("#VCO").mouseout(function () {
+		$(".VCO_sub").html("")
+	  })
+  
+	  $("#FILTER").mouseover(function () {
+		$(".FILTER_sub").html("High/Low<br>Pass Filter")
+	  })
+	  $("#FILTER").click(function () {
+		$("#content_text").fadeOut("slow",function() {
+			$("#content_text").html("You can think of a filter as a kind of broad equalizer, able to remove (or filter out) certain frequencies, as dialed in by the user. By far the most common kind of filter is the low-pass filter, which allows frequencies below a certain point to pass. The opposite of the low-pass is the high-pass filter, which filters out low frequencies and allows high frequencies to pass through.")
+			$("#content_text").fadeIn(2000)
+		})
+	  })
+	  $("#FILTER").mouseout(function () {
+		$(".FILTER_sub").html("")
+	  })
+	  
+	  $("#VCA").mouseover(function () {
+		$(".VCA_sub").html("Voltage<br>Controlled<br>Amplifier")
+	  })
+	  $("#VCA").click(function() {
+		$("#content_text").fadeOut("slow",function() {
+			$("#content_text").html("This module controls the amplitude of a signal passing through it by scaling or attenuating it in response to a separate control voltage input. It is most commonly used as the last stage in a patch, articulating when we can hear or not hear a sound the synthesizer is producing.")
+			$("#content_text").fadeIn(2000)
+		})
+	  })
+	  $("#VCA").mouseout(function () {
+		$(".VCA_sub").html("")
+	  })
+	  
+	  $("#LFO").mouseover(function () {
+		$(".LFO_sub").html("Low Frequency<br>Oscillator")
+	  })
+	  $("#LFO").click(function () {
+		$("#content_text").fadeOut("slow", function() {
+			$("#content_text").html("Low-frequency oscillation (LFO) is an electronic frequency which is usually below 20 Hz and creates a rhythmic pulse or sweep. This pulse or sweep is used to modulate musical equipment such as synthesizers to create audio effects such as vibrato, tremolo and phasing.")
+			$("#content_text").fadeIn(2000)
+		})
+	  })
+	  $("#LFO").mouseout(function () {
+		$(".LFO_sub").html("")
+	  })
+	  
+	  $("#EG").mouseover(function () {
+		$(".EG_sub").html("Envelope<br>Generator")
+	  })
+	  $("#EG").click(function () {
+		$("#content_text").fadeOut("slow", function() {
+			$("#content_text").html("An envelope is a voltage signal that changes over time and is created by an envelope generator (EG) module. Many sounds need to change over time and we use the voltage from envelope generators to control parameters. The EG has controls that set the timing of the output envelope voltage over time.")
+			$("#content_text").fadeIn(2000)
+	
+		})
+	  })
+	  $("#EG").mouseout(function () {
+		$(".EG_sub").html("")	
+	})
+  
+	</script>
+  </body>
+</html>
