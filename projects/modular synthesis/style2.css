@@ -95,11 +95,11 @@ div.VCO:hover {
 }
 
 div.FILTER {
-	background: url("img/FILTER.jpg") no-repeat;
+	background: url("img/filter.jpg") no-repeat;
 	background-size: 120px;
 }
 div.FILTER:hover {
-	background: url("gifs/FILTER.gif") no-repeat;
+	background: url("gifs/filter.gif") no-repeat;
 	background-size: 120px;
 }
 
