@@ -47,6 +47,15 @@ body{
 	*/
 }
 
+.cart-count {
+	display: none;
+	background-color: blue;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	padding: 6px;
+	color: #fff;
+}
 #product_list {
 	display: flex;
 	margin: auto;
@@ -75,7 +84,9 @@ body{
 	font-weight: bold;
 	font-size: large;
 }
-
+#cart {
+	width: 120px;
+}
 p {
 	text-decoration: none;
 	font-family: sans-serif;
@@ -94,12 +105,12 @@ a {
 	max-width: 100%;
 }
 
-#sizes{
+.sizes{
 	display: flex;
 	width: auto;
 }
 
-#sizes button {
+.sizes button {
 	background-color: white;
 	border: 1px solid #0000ff;
 	border-radius: 3px;
@@ -109,8 +120,12 @@ a {
 	margin: 1px;
 	color: #0000ff;
 }
+button.active-size {
+	color: white;
+	background-color: blue;
+}
 
-#add {
+.add {
 	background-color: blue;
 	color: white;
 	border: 1px solid blue;
