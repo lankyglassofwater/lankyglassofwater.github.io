@@ -1,6 +1,6 @@
 // center cart item number
 // align desktop links with links_des
-
+* {box-sizing: border-box;}
 
 div::-webkit-scrollbar {
 	width: 12px;
@@ -34,10 +34,7 @@ body{
 }
 
 #top {
-	display: flex;
 	margin: auto;
-	flex-direction: row;
-	justify-content: space-evenly;
 	width: 100%;
 	padding: 40px 0px 40px;
 	border-bottom: #0000ff;
@@ -47,11 +44,25 @@ body{
 	background-color: white;
 }
 
+#top .grid {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
 #cart_view {
 	display: none;
 	margin: auto;
 	border-bottom: 3px solid blue;
 	padding: 50px;
+}
+
+.cart-display  article{
+	border: 1px solid black;
+	display: flex;
+}
+
+.hidden {
+	display:none;
 }
 
 #top div {

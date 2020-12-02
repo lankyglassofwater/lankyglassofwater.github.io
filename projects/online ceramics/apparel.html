@@ -11,9 +11,14 @@
 </head>
 <body>
 	<div id="top">
-		<div id="home_button"><a href="home.html"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></a></div>
-		<!-- add functionality of slide/pop-in cart menu -->
-		<div class="cart"><a href="cart.html">Cart <span class="cart-count"></span></a></div>
+		<div class="grid">
+			<div id="home_button"><a href="home.html"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></a></div>
+			<!-- add functionality of slide/pop-in cart menu -->
+			<div class="cart"><a href="cart.html" id="cart-view">Cart <span class="cart-count"></span></a></div>
+		</div>
+		<div class="cart-display hidden">
+			<!-- populated by jquery -->
+		</div>
 	</div>
 	<nav id="navbar">
 			<div id="logoholder"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></div>
@@ -21,6 +26,7 @@
 			<div id="apparelholder"><h1><a href="apparel.html"><u>Apparel</u></a></h1></div>
 			<div id="linksholder"><h1><a href="links.html">Links</a></h1></div>
 			<div id="cartholder"><h1><a class="cart" href="cart.html">Cart <span class="cart-count"></span></a></h1></div>
+
 	</nav>
 	<div id="product_list">
 		<div class="product">
@@ -38,7 +44,7 @@
 				<button>L</button>
 				<button>XL</button>
 			</div>
-			<div><button class="add">add to cart</button></div>
+			<div><button class="add mario">add to cart</button></div>
 		</div>
 		<div class="product">
 			<div class="top_container">
@@ -124,6 +130,20 @@
 			$('button').not(this).removeClass('active-size')
 		});
 			
+			let cartItem = `
+			<article class="cart-item">
+				<div class="left"><img src="http://placekitten.com/200/200"></div>
+				<div class="right">words words words </div>
+			</article>
+			`
+		$('#cart-view').click(function(e){
+			e.preventDefault()
+			let cartCounter = 0
+
+			$('.cart-display').toggleClass('hidden')
+				cartItem == `There is nothing in your cart`
+				$('.cart-display').html(cartItem)
+		})
 
 		
 	</script>
