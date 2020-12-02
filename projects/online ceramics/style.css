@@ -1,3 +1,7 @@
+// center cart item number
+// align desktop links with links_des
+
+
 div::-webkit-scrollbar {
 	width: 12px;
 	height: 12px;
@@ -12,7 +16,7 @@ body{
 	margin: 0px;
 }
 
-#navbar {
+#navhome {
 	display: flex;
 	margin: auto;
 	padding-top: 100px;
@@ -21,7 +25,11 @@ body{
 	position: relative;
 }
 
-#navbar div {
+#navbar {
+	display: none;
+}
+
+#navhome div {
 	padding: 10px;
 }
 
@@ -39,6 +47,13 @@ body{
 	background-color: white;
 }
 
+#cart_view {
+	display: none;
+	margin: auto;
+	border-bottom: 3px solid blue;
+	padding: 50px;
+}
+
 #top div {
 	text-align: center;
 	/*
@@ -51,11 +66,13 @@ body{
 	display: none;
 	background-color: blue;
 	border-radius: 50%;
-	width: 32px;
-	height: 32px;
-	padding: 6px;
+	width: 20px;
+	height: 20px;
+	padding: 5px;
 	color: #fff;
+	text-align: center;
 }
+
 #product_list {
 	display: flex;
 	margin: auto;
@@ -76,17 +93,22 @@ body{
 	padding-bottom: 10px;
 }
 
-#logo,
-#cart {
+#logo {
 	width: 90px;
 	padding-left: 10px;
 	align-self: center;
 	font-weight: bold;
 	font-size: large;
 }
-#cart {
+
+.cart {
 	width: 120px;
+	padding-left: 10px;
+	align-self: center;
+	font-weight: bold;
+	font-size: large;
 }
+
 p {
 	text-decoration: none;
 	font-family: sans-serif;
@@ -166,6 +188,15 @@ button.active-size {
 	padding-bottom: 15px;
 }
 
+#links_list a:hover {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+#link_des {
+	display: none;
+}
+
 #bottom_fade {
 	background: linear-gradient(to top, #0000ff 0%, transparent 100%);
 	position: fixed;
@@ -175,14 +206,138 @@ button.active-size {
 }
 
 @media (min-width: 768px) {
-	#navbar {
-		height: 100px;
-		flex-direction: row;
-		
+	div::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+	div::-webkit-scrollbar-thumb {
+		background-color: blue;
+		border-radius: 20px;
+		border: 3px solid white;
 	}
 	
-	#logo {
-		order: 2;
+	#navbar {
+		display: flex;
+		padding-top: 100px;
+		height: 100px;
+		flex-direction: row;
+		margin: auto;
+		justify-content: space-evenly;
+	}
+	#navbar div a {
+		pointer-events: auto;
+		padding: 5px 20px;
+		border-radius: 10px;
+	}
+	#navbar div a:hover {
+		color: white;
+		background-color: blue;
+	}
+	
+	#cart_view{
+		display: flex;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	#container {
+		min-height: 300px;
+	}
+	#totaldiv {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 100px;
+	}
+	#total p {
+		font-size: larger;
+		font-weight: bold;
+		border-radius: 30px;
+		padding: 10px;
+		background-color: blue;
+		color: white;
+		max-width: fit-content;
+	}
+	#dollars p {
+		font-size: larger;
+		font-weight: bold;
+		border-radius: 30px;
+		border: 3px solid blue;
+		padding: 10px;
+		background-color: white;
+		color: blue;
+		max-width: fit-content;
+	}
+	
+	#top {
+		display: none;
+	}
+	
+	#apparelholder {
+		order: -1;
+	}
+	#aboutholder {
+		order: -2;
+	}
+	#logoholder {
+		order: 0;
+	}
+	
+	#about {
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: column;
+		padding: 50px;
+	}
+	#abouttext {
+		column-count: 2;
+	}
+	#abouttext p {
+		font-size: larger;
+	}
+	#horse {
+		max-width: 50%;
+	}
+	
+	#product_list {
+		flex-direction: row;	
+		justify-content: space-between;
+		padding: 50px;
+	}
+	.product {
+		max-width: 40%;
+	}
+	.cart {
+		font-weight: lighter;
+		font-size: inherit;
+	}
+	.top_container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	#links {
+		display: flex;
+		justify-content: center;	
+	}
+	#links_list,
+	#link_des {
+		display: flex;
+		padding: 50px 20px 0px;
+		margin: 0px;
+		flex-direction: column;
+		max-width: 50%;
+	}
+	#link_des {
+		max-width: fill-available;
+	}
+	#links_list a {
+		text-align: right;
+	}
+	#link_des p {
+		font-weight: lighter;
+		font-size: large;
+		padding-bottom: 15px;
+		margin: 0px;
 	}
 	
 	#bottom_fade {
