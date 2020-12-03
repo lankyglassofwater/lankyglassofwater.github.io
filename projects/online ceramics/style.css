@@ -45,7 +45,6 @@ body{
 	border-bottom-width: 2px;
 	position: fixed;
 	background-color: white;
-	overflow: scroll;
 }
 
 #cart_view {
@@ -68,6 +67,16 @@ body{
 
 .cart-display {
 	display: block;
+	overflow: scroll;
+	height: 100vh;
+}
+.left {
+	position: relative;
+}
+.size {
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 .hidden {
 	display: none;
@@ -87,6 +96,10 @@ article {
 	color: #fff;
 	text-align: center;
 }
+.cart-item {
+	border-bottom: 1px solid blue;
+}
+.cart-empty {}
 
 #product_list {
 	display: flex;
