@@ -31,7 +31,7 @@
 	<div id="product_list">
 		<div class="product">
 			<div class="top_container">
-				<div class="prod_name"><p>Mario Ayala's Halloween <br> Black Tee</p></div>
+				<div class="prod_name"><p>Mario Ayala's Halloween<br>Black Tee</p></div>
 				<div class="prod_price"><p>$110</p></div>
 			</div>
 			<div class="images">
@@ -44,11 +44,11 @@
 				<button>L</button>
 				<button>XL</button>
 			</div>
-			<div><button class="add mario">add to cart</button></div>
+			<div><button class="add">add to cart</button></div>
 		</div>
 		<div class="product">
 			<div class="top_container">
-				<div class="prod_name"><p>Magic Blood Logo <br>Brown 14oz Heavywight Crewneck Sweatshirt</p></div>
+				<div class="prod_name"><p>Magic Blood Logo <br>Brown 14oz Heavyweight Crewneck Sweatshirt</p></div>
 				<div class="prod_price"><p>$90</p></div>
 			</div>
 			<div class="images">
@@ -130,19 +130,22 @@
 			$('button').not(this).removeClass('active-size')
 		});
 			
+		$('#cart-view').click(function(e){
+			e.preventDefault()
 			let cartItem = `
 			<article class="cart-item">
 				<div class="left"><img src="http://placekitten.com/200/200"></div>
 				<div class="right">words words words </div>
 			</article>
 			`
-		$('#cart-view').click(function(e){
-			e.preventDefault()
-			let cartCounter = 0
-
-			$('.cart-display').toggleClass('hidden')
-				cartItem == `There is nothing in your cart`
-				$('.cart-display').html(cartItem)
+			if (cartCounter == 0) {
+				$('.cart-display').toggleClass('hidden')
+					cartItem == `There is nothing in your cart`
+					$('.cart-display').html(cartItem)
+				} else {
+					$('.cart-display').toggleClass('hidden')
+					$('.cart-display').append(cartItem)
+				}
 		})
 
 		

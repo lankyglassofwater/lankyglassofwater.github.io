@@ -1,6 +1,6 @@
 // center cart item number
 // align desktop links with links_des
-* {box-sizing: border-box;}
+// desktop nav bar slightly shifting on some pages
 
 div::-webkit-scrollbar {
 	width: 12px;
@@ -34,7 +34,10 @@ body{
 }
 
 #top {
+	display: flex;
 	margin: auto;
+	flex-direction: column;
+	flex-wrap: wrap;
 	width: 100%;
 	padding: 40px 0px 40px;
 	border-bottom: #0000ff;
@@ -42,13 +45,9 @@ body{
 	border-bottom-width: 2px;
 	position: fixed;
 	background-color: white;
+	overflow: scroll;
 }
 
-#top .grid {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-}
 #cart_view {
 	display: none;
 	margin: auto;
@@ -56,21 +55,26 @@ body{
 	padding: 50px;
 }
 
-.cart-display  article{
-	border: 1px solid black;
+.grid {
 	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.grid div {
+	max-width: 50%;
 }
 
+.cart-display {
+	display: block;
+}
 .hidden {
-	display:none;
+	display: none;
 }
 
-#top div {
-	text-align: center;
-	/*
-	border-color: black;
-	border-style: solid;
-	*/
+article {
+	padding: 50px;
 }
 
 .cart-count {
@@ -108,8 +112,6 @@ body{
 	width: 90px;
 	padding-left: 10px;
 	align-self: center;
-	font-weight: bold;
-	font-size: large;
 }
 
 .cart {
