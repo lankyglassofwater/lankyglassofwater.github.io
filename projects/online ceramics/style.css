@@ -325,15 +325,20 @@ button.active-size {
 	#logoholder {
 		order: 0;
 	}
-	
+	#aboutbody {
+		overflow: hidden;
+	}
 	#about {
+		display: flex;
+		overflow: hidden;
 		flex-wrap: wrap;
 		justify-content: center;
-		flex-direction: column;
+		flex-direction: row;
 		padding: 50px;
 	}
 	#abouttext {
 		column-count: 2;
+		max-width: 50%;
 	}
 	#abouttext p {
 		font-size: larger;
