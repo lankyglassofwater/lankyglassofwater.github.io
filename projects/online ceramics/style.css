@@ -73,10 +73,24 @@ body{
 .left {
 	position: relative;
 }
+.left img {
+	max-width: 100px;
+}
 .size {
+	display: inline-block;
 	position: absolute;
 	top: 20px;
-	left: 20px;
+	left: -15px;
+	color: white;
+	background-color: blue;
+	padding: 10px;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+	
 }
 .hidden {
 	display: none;
@@ -223,6 +237,10 @@ button.active-size {
 	display: none;
 }
 
+#links_table {
+	display: none;
+}
+
 #bottom_fade {
 	background: linear-gradient(to top, #0000ff 0%, transparent 100%);
 	position: fixed;
@@ -282,7 +300,8 @@ button.active-size {
 		color: white;
 		max-width: fit-content;
 	}
-	#dollars p {
+	#dollars p ,
+	.pricetag p {
 		font-size: larger;
 		font-weight: bold;
 		border-radius: 30px;
@@ -368,5 +387,33 @@ button.active-size {
 	
 	#bottom_fade {
 		display: none;
+	}
+	
+	#links {
+		display: none;
+	}
+	#links_table {
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		padding: 50px;	
+	}
+	
+	.table {
+		display: block;
+		margin: auto;
+		max-width: 800vw;
+	}
+	td {
+		vertical-align: baseline;
+		max-width: 400px;
+	}
+	td a {
+		font-weight: bold;
+		float: right;
+	}
+	td p {
+		font-size: medium;
+		padding-left: 20px;
 	}
 }

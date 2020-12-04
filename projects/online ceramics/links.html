@@ -12,16 +12,21 @@
 </head>
 <body>
 	<div id="top">
-		<div id="home_button"><a href="home.html"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></a></div>
-		<!-- add functionality of slide/pop-in cart menu -->
-		<div class="cart"><a href="cart.html">Cart <span class="cart-count"></span></a></div>
+		<div class="grid">
+			<div id="home_button"><a href="home.html"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></a></div>
+			<!-- add functionality of slide/pop-in cart menu -->
+			<div class="cart"><a href="#" id="cart-view">Cart <span class="cart-count"></span></a></div>
+		</div>
+		<div class="cart-display hidden">
+			<!-- populated by jquery -->
+		</div>
 	</div>
 	<nav id="navbar">
-			<div id="logoholder"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></div>
-			<div id="aboutholder"><h1><a href="about.html">About</a></h1></div>
-			<div id="apparelholder"><h1><a href="apparel.html">Apparel</a></h1></div>
-			<div id="linksholder"><h1><a href="links.html"><u>Links</u></u></a></h1></div>
-			<div id="cartholder"><h1><a class="cart" href="cart.html">Cart <span class="cart-count"></span></a></h1></div>
+		<div id="logoholder"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></div>
+		<div id="aboutholder"><h1><a href="about.html">About</a></h1></div>
+		<div id="apparelholder"><h1><a href="apparel.html">Apparel</a></h1></div>
+		<div id="linksholder"><h1><a href="links.html"><u>Links</u></u></a></h1></div>
+		<div id="cartholder"><h1><a class="cart" href="cart.html">Cart <span class="cart-count"></span></a></h1></div>
 	</nav>
 	<div id="links">
 		<div id="links_list">
@@ -49,6 +54,52 @@
 				the love teachings of Neem Karoli Baba. Hari Om!</p>
 			<p>Monday night kirtan gets us sooo high.</p>
 		</div>
+	</div>
+	<div id="links_table">
+		<table>
+			<tr>
+				<td><a href="https://www.greatserpentmound.com/">Serpent Mound</a></td>
+				<td><p>International treasure in our home state of Ohio.</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.facebook.com/missnadinespots/">Miss Nadine's Pot Heads</a></td>
+				<td><p>Custom flower pot people. She caters to the Dead crowd.</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.amateurmedium.com/">Amateur Medium</a></td>
+				<td><p>Psycho patches our close friend Brian Sharrock hand makes.</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://fromthelot.tumblr.com/">From the Lot</a></td>
+				<td><p>Psycho database of GD shirts and lot shirts. They have ripped merch too.</p></td>
+			</tr>
+			<tr>
+				<td><a href="strangefieldassociates@gmail.com">Craig D.</a></td>
+				<td><p>Screen printing and Subaru master&#8211;he's got you covered.</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.whfoods.com/index.php">World's Healthiest Foods</a></td>
+				<td><p>Make sure your plant-based boogie has you rockin' all night!</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.aquariumdrunkard.com/category/dead-notes/">Dead Notes</a></td>
+				<td><p>Our buddy, listening guru AKA major tape plug, Darryl's solid blog.</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.gdradio.net/">Grateful Dead Radio</a></td>
+				<td><p>Spinning shows 24/7&#8211;Always there when you need to get a 'lil in...</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.ramdass.org/love-serve-remember-foundation/">Love Serve Remember</a></td>
+				<td><p>This foundation that has deeply inspired us. Deadicated to spreading the
+					the love teachings of Neem Karoli Baba. Hari Om!</p></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.bhaktiyogashala.com/">Bhakti Yoga Shala</a></td>
+				<td><p>Monday night kirtan gets us sooo high.</p></td>
+			</tr>
+
+		</table>
 	</div>
 	<div id="bottom_fade"></div>
 </body>

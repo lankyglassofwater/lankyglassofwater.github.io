@@ -12,11 +12,16 @@
 </head>
 <body>
 	<div id="top">
-		<div id="home_button"><a href="home.html"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></a></div>
-		<!-- add functionality of slide/pop-in cart menu -->
-		<div id="cart"><a href="cart.html">Cart</a></div>
+		<div class="grid">
+			<div id="home_button"><a href="home.html"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></a></div>
+			<!-- add functionality of slide/pop-in cart menu -->
+			<div class="cart"><a href="#" id="cart-view">Cart <span class="cart-count"></span></a></div>
+		</div>
+		<div class="cart-display hidden">
+			<!-- populated by jquery -->
+		</div>
 	</div>
-	<nav id="navbar">
+		<nav id="navbar">
 			<div id="logoholder"><img id="logo" src="images/OC_logo.jpg" alt="blue logo"></div>
 			<div id="aboutholder"><h1><a href="about.html"><u>About</u></a></h1></div>
 			<div id="apparelholder"><h1><a href="apparel.html">Apparel</a></h1></div>
